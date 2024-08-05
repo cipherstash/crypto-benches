@@ -3,7 +3,7 @@ use cmac::Cmac;
 use criterion::{criterion_group, criterion_main, Criterion, Throughput, BenchmarkId};
 use hmac::{Hmac, Mac};
 use pmac::Pmac;
-use sha2::{Sha256, Digest};
+use sha2::Sha256;
 
 const KB: usize = 1024;
 type Benchmarker = Criterion;

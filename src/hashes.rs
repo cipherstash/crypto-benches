@@ -21,6 +21,11 @@ fn bench(c: &mut Benchmarker) {
                 Sha256::digest(input);
             })
         });
+        group.bench_with_input(BenchmarkId::new("ring-sha2-256", size), buf.as_ref(), |b, input: &[u8]| {
+            b.iter(|| {
+                ring::digest::digest(&ring::digest::SHA256, input)
+            })
+        });
         group.bench_with_input(BenchmarkId::new("rust-crypto-sha3-256", size), buf.as_ref(), |b, input: &[u8]| {
             b.iter(|| {
                 Sha3_256::digest(&input)

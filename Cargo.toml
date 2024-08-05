@@ -20,9 +20,7 @@ tiny-keccak = { version = "2.0.2", features = ["k12"] }
 cmac = "0.7.2"
 pmac = "0.7.1"
 aes = "0.8.3"
-
-[dependencies.keccak]
-features = ["asm", "simd"]
+aws-lc-rs = "1.8.1"
 
 [[bench]]
 name = "aes-gcm"
