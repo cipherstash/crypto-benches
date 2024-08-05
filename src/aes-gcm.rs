@@ -33,7 +33,7 @@ impl NonceSequence for IntegerNonceSequence {
 fn bench(c: &mut Benchmarker) {
     let mut group = c.benchmark_group("aes-gcm");
 
-    for size in &[KB, 2 * KB, 4 * KB] {
+    for size in &[16, 100, 1000, 2 * KB, 4 * KB] {
         let mut buf = vec![0u8; *size];
 
         group.throughput(Throughput::Bytes(*size as u64));
