@@ -14,8 +14,8 @@ fi
 trap "echo SOMETHING WENT WRONG - please read the logs above and see if it helps you figure out what is wrong - and also ask an engineer help" ERR
 
 subproject_setup() {
-  cargo install cargo-criterion
-  cargo install criterion-table
+  cargo binstall --no-confirm cargo-criterion
+  cargo binstall --no-confirm criterion-table
 }
 
 subproject_bench() {
