@@ -19,6 +19,14 @@ subproject_setup() {
 }
 
 subproject_bench() {
+  if ! cargo criterion -V >/dev/null 2>&1; then
+    echo "error: unable to find: cargo criterion"
+    exit 1
+  fi
+  if ! which criterion-table >/dev/null 2>&1; then
+    echo "error: unable to find criterion-table"
+    exit 1
+  fi
   RUSTFLAGS="--cfg aes_armv8" cargo criterion --message-format=json | criterion-table > BENCHMARKS.md
 }
 
