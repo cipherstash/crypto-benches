@@ -13,6 +13,8 @@ The results will output to a file called `BENCHMARKS.md`.
 
 Feel free to open a PR and add your own results if your system is different to the ones tested below.
 
+Please include details of the system you test with in the PR.
+
 _Updated to include AWS LC AES-GCM-SIV benches_
 
 | System | OS | Results |
