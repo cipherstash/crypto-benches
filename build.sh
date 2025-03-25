@@ -30,6 +30,10 @@ subproject_bench() {
   RUSTFLAGS="--cfg aes_armv8" cargo criterion --message-format=json | criterion-table > BENCHMARKS.md
 }
 
+subproject_test() {
+  cargo check
+}
+
 subcommand="${1:-build}"
 case $subcommand in
   setup)
@@ -38,6 +42,10 @@ case $subcommand in
 
   bench)
     subproject_bench
+    ;;
+
+  test)
+    subproject_test
     ;;
 
   *)
