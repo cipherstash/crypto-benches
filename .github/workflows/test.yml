@@ -38,7 +38,6 @@ jobs:
           install: true # [default: true] run `mise install`
           cache: true # [default: true] cache mise using GitHub's cache
 
-      - name: Test EQL for Postgres ${{ matrix.postgres-version }}
-        run: |
+      - run: |
           ./build.sh test
           # mise run --output prefix test
