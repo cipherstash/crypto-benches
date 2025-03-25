@@ -7,6 +7,7 @@
 
 set -e # exit when a command fails
 set -u # exit when script tries to use undeclared variables
+set -o pipefail # exit if any command in a pipeline fails
 if [[ -n "${DEBUG_BUILD_SH:-}" ]]; then
   set -x # trace what gets executed (useful for debugging)
 fi
