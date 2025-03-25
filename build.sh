@@ -35,7 +35,7 @@ subproject_test() {
   cargo check
 }
 
-subcommand="${1:-build}"
+subcommand="${1:-bench}"
 case $subcommand in
   setup)
     subproject_setup
