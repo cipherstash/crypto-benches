@@ -22,6 +22,7 @@ _Updated to include AWS LC AES-GCM-SIV benches_
 | System | OS | Results |
 |--------|----|---------|
 | Mac Studio M1 Max 64GB RAM | MacOS 14.5 | [BENCHMARKS](results/mac-studio-14.md) |
+| MacBook Air M4 24GB RAM | MacOS 15.5 | [BENCHMARKS](results/macbook-air-m4-15.md) |
 
 ## Setup
 
